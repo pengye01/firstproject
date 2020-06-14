@@ -10,8 +10,8 @@ from castro import  Castro
 class Baidu(unittest.TestCase):
     def setUp(self):
 
-        self.screenCaoture=Castro(filename='testbadidu.swf')
-        self.screenCaoture.start()
+        #self.screenCaoture=Castro(filename='testbadidu.swf')
+        #self.screenCaoture.start()
         self.driver=webdriver.Chrome()
         self.driver.implicitly_wait(30)
         self.base_url='https://www.baidu.com/'
@@ -88,6 +88,6 @@ class Baidu(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
         self.assertEqual([],self.verificationErrors)
-        self.screenCaoture.stop()
+        #self.screenCaoture.stop()
 if __name__ == '__main__':
     unittest.main()
